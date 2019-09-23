@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $.ajax({
+            url:"check",
+            type:"get",
+            success:function (data) {
+                console.log(data);
+                if(data==1){
+                    $("#top_R").html(" <a>名字</a> | <a>个人中心</a>  | <a>登记</a>  | <a>好友</a>  | <a>积分分</a>  |");
+                }else{
+                    $("#top_R").html(" <a>注册</a> | <a>登录</a>  ")
+                }
+            }
+        });
+    });
+    
+</script>
+<style>
+    #top_ACG{
+
+        width: 95%;
+        margin: 0 auto;
+        height: 30px;
+        color: red;
+    }
+    #top_R{
+        float: right;
+        display: inline;
+        margin: 5px 10px 0 0;
+    }
+    #top_L{
+        float: left;
+        margin: 5px 0 0 5px;
+        display: inline;
+    }
+    ul li{
+        list-style: none;
+    }
+</style>
+<body>
+<div id="top_ACG">
+    <div id="top_R">
+    </div>
+    <ul id="top_L">
+        <li id="top_L_L" style="width: 17px;height: 15px;float: left;"></li>
+        <li id="top_L_R" style="float: left;padding-left: 3px;"> ACG论坛</li>
+    </ul>
+</div>
+</body>
+</html>

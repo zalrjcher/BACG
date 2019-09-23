@@ -218,6 +218,17 @@
       <version>3.3.7</version>
     </dependency>
     <!--log4j2完-->
+    <dependency>
+      <groupId>com.zlj.bbs</groupId>
+      <artifactId>user</artifactId>
+      <version>1.0-SNAPSHOT</version>
+    </dependency>
+    <!-- md5加密-->
+    <dependency>
+      <groupId>commons-codec</groupId>
+      <artifactId>commons-codec</artifactId>
+      <version>1.6</version>
+    </dependency>
   </dependencies>
   <build>
     <plugins>

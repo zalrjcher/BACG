@@ -1,6 +1,6 @@
 package com.zlj.mapper;
 
-import com.zlj.bean.User;
+import com.zlj.bean.Post;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -11,7 +11,6 @@ import java.util.List;
  */
 
 @Component
-public interface UserMapper {
-    void addUser(User user);
-    List<User> selectUname(User user);
+public interface PostMapper {
+    List<Post> selectAllPost();
 }

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript" src="js/jquery-1.4.2.min.js" ></script>
+    <script type="text/javascript">
+        $(function () {
+            var str = "<table>"
+            $.ajax({
+                url:"allPost",
+                type:"get",
+                context:"Application/json;charset=utf-8",
+                dataType:"json",
+                success:function (data) {
+                    console.log(data);
+                    for(var i = 0 ; i < data.length ; i ++){
+                        str += "<tbody class = '";
+                        str+=data[i].id+"'>"+"<tr><th>"+data[i].title+"</th></tr>";
+                        str += "</tbody>";
+                    }
+                str+="</table>";
+                    console.log(str);
+                    $("#list").html(str);
+                }
+            });
+        });
+    </script>
+    <style>
+        th{
+            padding: 5px;
+            font-weight: 400;
+            border-bottom:1px solid #326598;
+        }
+        table{
+            width: 100%;
+            background-color:#f2f2f2;
+            table-layout: fixed;
+            border-collapse: separate;
+        }
+
+    </style>
+    <!--background-color: rgb(241,241,241); #C2D5E3 鼠标上去   async :false, 让ajax同步
+-->
+</head>
+<body>
+
+
+<div id="list"></div>
+<span id="ddd"></span>
+</body>
+</html>

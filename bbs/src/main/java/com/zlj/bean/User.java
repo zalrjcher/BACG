@@ -1,11 +1,13 @@
 package com.zlj.bean;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 /**
  * @author zlj
  * @introduce
  */
 public class User {
-
     private String  name ;
 
     public String getPwd() {
@@ -16,9 +18,16 @@ public class User {
         this.pwd = pwd;
     }
 
-
-
     private String pwd ;
+    private String  nickName;
+
+    public String getNickName() {
+        return nickName;
+    }
+
+    public void setNickName(String nickName) {
+        this.nickName = nickName;
+    }
 
     public String getName() {
         return name;
@@ -33,7 +42,7 @@ public class User {
         return "User{" +
                 "name='" + name + '\'' +
                 ", pwd='" + pwd + '\'' +
+                ", nickName='" + nickName + '\'' +
                 '}';
     }
-
 }

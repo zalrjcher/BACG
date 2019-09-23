@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+    <script>
+        $(function () {
+            $("#sum").click(function () {
+                $.ajax({
+                    url:"LogIn",
+                    type:"post",
+                    context:"Application/json;charset=utf-8",
+                    data:{
+                        name:$("#username").val(),
+                        pwd :$("#password").val()
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+<div style="height: 800px; width: 100%; ">
+
+    <table  style="margin: auto;margin-top: 200px;">
+        <tr>
+            <td><input type="text"  id="username">账号<br>&nbsp;&nbsp; </td>
+        </tr>
+        <tr><td><input type="text"  id="password">密码<br>&nbsp;&nbsp;</td></tr>
+        <tr>
+            <td><input type="button" value="提交" id="sum">&nbsp;&nbsp;</td>
+        </tr>
+    </table>
+
+</div>
+</body>
+</html>

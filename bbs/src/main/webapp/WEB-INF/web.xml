@@ -62,7 +62,6 @@
        <welcome-file>index.html</welcome-file>
    </welcome-file-list>
 
-
     <context-param>
         <param-name>log4jConfigLocation</param-name>
         <param-value>classpath:log4j.properties</param-value>

@@ -9,4 +9,5 @@ import com.zlj.bean.User;
 public interface UserService {
 
     void addUser(User user);
+    int selectUname(User user);
 }

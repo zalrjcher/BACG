@@ -4,5 +4,6 @@
         PUBLIC "-//mybatis.org//DTD Mapper  3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.zlj.mapper.UserMapper" >
-    <insert id="addUser" >insert into user(name,age) values(#{name},#{age})</insert>
+    <insert id="addUser" >insert into bs_user(account,pwd,nickName) values(#{name},#{pwd},#{nickName})</insert>
+    <select id="selectUname" resultType="com.zlj.bean.User">select * from bs_user where account = #{name} </select>
 </mapper>
